@@ -13,7 +13,7 @@ use bevy::{
         render_resource::{Extent3d, TextureFormat, TextureUsages},
         view::RenderLayers,
     },
-    scene2::{CommandsSpawnScene, ScenePatchInstance, bsn, on},
+    scene2::{CommandsSpawnScene, bsn, on},
     ui::ui_layout_system,
 };
 use bevy_editor_cam::prelude::{DefaultEditorCamPlugins, EditorCam};
