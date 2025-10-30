@@ -1,4 +1,4 @@
-use crate::{AssetBrowserLocation, DirectoryContent, DirectoryContentOrder, Entry};
+use crate::{AssetBrowserLocation, DirectoryContent, Entry};
 use bevy::{
     asset::io::AssetSourceBuilders,
     prelude::*,
