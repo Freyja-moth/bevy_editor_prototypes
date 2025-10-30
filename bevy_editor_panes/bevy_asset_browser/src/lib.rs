@@ -57,9 +57,13 @@ impl Plugin for AssetBrowserPanePlugin {
             )
             .add_systems(
                 Update,
-                ui::directory_content::refresh_ui
+                (
+                    ui::directory_content::sort_directory_content,
+                    ui::directory_content::refresh_ui,
+                )
                     .run_if(directory_content_as_changed)
-                    .after(io::task::poll_task),
+                    .after(io::task::poll_task)
+                    .chain(),
             )
             .add_systems(
                 Update,
