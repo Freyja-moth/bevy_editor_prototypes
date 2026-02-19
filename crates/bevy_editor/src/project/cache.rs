@@ -28,7 +28,7 @@ fn get_cache_folder() -> PathBuf {
     #[cfg(target_os = "linux")]
     let path = std::env::var("XDG_DATA_HOME")
         .map(PathBuf::from)
-        .unwrap_or(PathBuf::from(std::env::var("HOME").unwrap()).join(".local/share"));
+        .unwrap_or_else(|_| PathBuf::from(std::env::var("HOME").unwrap()).join(".local/share"));
 
     path.join(CACHE_FOLDER_NAME)
 }
