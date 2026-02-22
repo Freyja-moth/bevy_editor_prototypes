@@ -83,11 +83,10 @@ pub fn spawn_location_path_ui<'a>(
     )
     .insert(ChildOf(location_path));
 
-    if location.source_id.is_some() {
+    if let Some(source_id) = &location.source_id {
         commands
             .spawn(path_separator_ui(theme.as_ref()))
             .insert(ChildOf(location_path));
-        let source_id = location.source_id.as_ref().unwrap();
         spawn_path_segment_ui(
             commands,
             source_id_to_string(source_id),

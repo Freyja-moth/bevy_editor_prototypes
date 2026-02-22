@@ -17,7 +17,7 @@ struct ProjectsCache {
 /// Get Bevy Editor's cache folder path
 /// `Windows`: %LOCALAPPDATA%/[`CACHE_FOLDER_NAME`]
 /// `MacOS`: ~/Library/Caches/[`CACHE_FOLDER_NAME`]
-/// `Linux`: $XDG_DATA_HOME/[`CACHE_FOLDER_NAME`]
+/// `Linux`: $`XDG_DATA_HOME`/[`CACHE_FOLDER_NAME`]
 fn get_cache_folder() -> PathBuf {
     #[cfg(target_os = "windows")]
     let path = PathBuf::from(std::env::var("LOCALAPPDATA").unwrap());
