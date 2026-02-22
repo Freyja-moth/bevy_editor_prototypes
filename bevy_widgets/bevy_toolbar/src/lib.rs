@@ -42,7 +42,7 @@ pub struct ToolbarButton {
 }
 
 /// Available editor tools.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+#[derive(Debug, Default, Clone, Copy, PartialEq, Eq)]
 pub enum EditorTool {
     /// Selection tool for picking entities.
     #[default]
